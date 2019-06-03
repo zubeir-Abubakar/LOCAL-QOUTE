@@ -18,12 +18,12 @@ export class QuotesDetailsComponent implements OnInit {
     this.votes = 0;
    }
 
-   likeVote(): bool ean{
+   likeVote(): boolean{
     this.votes +=1;
     return false;
   }
 
-  dislikeVote(): boolean{
+  dislike Vote(): boolean{
    this.votes -=1;
    return false;
  }
