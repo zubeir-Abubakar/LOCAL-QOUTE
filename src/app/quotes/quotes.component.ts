@@ -21,14 +21,14 @@ export class QuotesComponent implements OnInit {
 
    addNewQuotes(quote){
         let quoteLength = this.quotes.length;
-        quote.id=quoteLength+1;
+        quote.id = quoteLength+1;
         quote.postDate = new Date(quote.postDate)
         this.quotes.push(quote)
 
     }
 
   toogleDetails(index){
-        this.quotes[index].showDescription = !this.quotes[index].showDe scription;
+        this.quotes[index].showDescription = !this.quotes[index].showDescription;
     }
 
   constructor() { }
