@@ -1,0 +1,52 @@
+<style>
+  *{
+    
+    background:black;
+    font-size: x-large;
+    color: aliceblue;
+
+  }
+  h1 {
+    font-style: bold,italic;
+    background: crimson;
+    margin-right: 40%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   margin-left: 40%;
+   height: 30px;
+   
+  }
+  marquee{
+    background: brown;
+    /* border-radius: 50%; */
+    width: 80%;
+    margin-left:10%;        
+  }
+
+</style>
+<body>
+  <div>
+    <marquee>Welcome to Quotes-master page 🤝! where you can post your quote 😎 or even give thumbs up 👍 and dislike 👎 others
+      Quote😎</marquee>
+  </div>
+  <div class="container">
+    <h1>Quotes-Master</h1>
+    <p>Clear your negative thoughts in you for your mind to gain positive pleassures (Amar Al-Bana)</p>
+    <ul>
+
+
+    <div *ngFor='let quote of quotes;let i = index'>
+
+
+      <li appHighlight >{{quote.name}} (posted on {{quote.postDate|date}})</li>
+      <button class="btn btn-primary btn-xs" (click)='toogleDetails(i)'>Toogle Details</button>
+      <br>
+     <app-quotes-details *ngIf="quote.showDescription" [quotes]='quote' (isComplete)= 'deleteQuotes($event,i)'></app-quotes-details>
+     </div>
+     <div class="row">
+        <app-quote-form (addQuotes)="addNewQuotes($event)" ></app-quote-form>
+    </div>
+  </ul>
+
+  </div>
+
+</body>
