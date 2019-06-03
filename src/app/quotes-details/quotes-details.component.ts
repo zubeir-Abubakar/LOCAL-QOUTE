@@ -23,7 +23,7 @@ export class QuotesDetailsComponent implements OnInit {
     return false;
   }
 
-  dislike Vote(): boolean{
+  dislikeVote(): boolean{
    this.votes -=1;
    return false;
  }
