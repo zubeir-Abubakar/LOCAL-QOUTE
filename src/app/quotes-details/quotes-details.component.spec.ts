@@ -4,7 +4,7 @@ import { QuotesDetailsComponent } from './quotes-details.component';
 
 describe('QuotesDetailsComponent', () => {
   let component: QuotesDetailsComponent;
-  let fixture: ComponentFixture<Q uotesDetailsComponent>;
+  let fixture: ComponentFixture<QuotesDetailsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
